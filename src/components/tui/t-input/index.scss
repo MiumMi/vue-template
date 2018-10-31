@@ -1,0 +1,27 @@
+@import '../style/_reset.scss';
+@import '../style/_color.scss';
+@import '../style/_calculate.scss';
+@import '../style/_base.scss';
+@import '../style/layout.scss';
+
+$t-input-height: 2rem;
+$t-input-font-size: $mid-font;
+$t-input-color: $b-8;
+$t-input-border-color: $border-gray;
+$t-input-padding: 5px 10px;
+
+.t-input{
+	height: $t-input-height;
+	border: solid $t-input-border-color;
+	border-width: 1px 0;
+	.input{
+		box-sizing: border-box;
+		width: 100%;
+		height: 100%;
+		padding: $t-input-padding;
+		outline: none;
+		border: none;
+		font-size: $t-input-font-size;
+		color: $t-input-color;
+	}
+}

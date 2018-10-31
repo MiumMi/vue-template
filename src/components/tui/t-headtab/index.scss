@@ -1,0 +1,42 @@
+@import '../style/_reset.scss';
+@import '../style/_color.scss';
+@import '../style/_calculate.scss';
+@import '../style/_base.scss';
+@import '../style/layout.scss';
+
+$t-headtab-height: 2.5rem;
+$t-headtab-margin: calculate(20);
+$t-headtab-font-style: $default-font;
+$t-headtab-font-size: $big-font;
+$t-headtab-active-color: $blue;
+
+.t-headtab{
+	box-sizing: border-box;
+	width: 100%;
+	height: $t-headtab-height;
+	padding-right: $t-headtab-margin;
+	font-family: $t-headtab-font-style;
+	font-size: $t-headtab-font-size;
+	ul{
+		height: $t-headtab-height;
+		overflow-y: hidden;
+		overflow-x: scroll;
+		li{
+			box-sizing: border-box;
+			height: $t-headtab-height;
+			line-height: $t-headtab-height;
+			margin-left: $t-headtab-margin
+		}
+		.active{
+			color: $t-headtab-active-color;
+		}
+		.active-bottom{
+			border-bottom: 1px solid $t-headtab-active-color;
+		}
+	}
+	ul::-webkit-scrollbar{
+		width: 0;
+		height: 0;
+		opacity: 0;
+	}
+}

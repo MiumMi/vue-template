@@ -1,0 +1,30 @@
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in below version 2.1.8 */ {
+  opacity: 0
+}
+.transform-up-enter-active, .transform-up-leave-active {
+  transition: transform .5s
+}
+.transform-up-enter, .transform-up-leave-to /* .fade-leave-active in below version 2.1.8 */ {
+   transform: translateY(100%);
+}
+
+.transform-down-enter-active, .transform-down-leave-active {
+  transition: transform .5s
+}
+.transform-down-leave-active {
+	transition: all 0s;
+}
+.transform-down-enter, .transform-down-leave-to /* .fade-leave-active in below version 2.1.8 */ {
+   opacity: 0;
+   transform: translateY(-100%);
+}
+
+.transform-left-enter-active, .transform-left-leave-active {
+  transition: transform .5s
+}
+.transform-left-enter, .transform-left-leave-to /* .fade-leave-active in below version 2.1.8 */ {
+   transform: translateX(100%);
+}

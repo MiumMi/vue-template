@@ -1,0 +1,75 @@
+@import '../../style/_reset.scss';
+@import '../../style/_color.scss';
+@import '../../style/_calculate.scss';
+@import '../../style/_base.scss';
+@import '../../style/_layout.scss';
+
+$t-action-sheet-font-style: $default-font;
+
+$t-ac-list-background-color: rgba(0, 0, 0, 0.50);
+$t-ac-item-height: calculate(98);
+$t-ac-item-font-size: calculate(34);
+$t-ac-item-cancel-font-size: calculate(34);
+$t-ac-item-background-color: #FFF;
+$t-ac-item-font-color: #007AFF;
+$t-ac-item-cancel-font-color: #666666;
+
+.t-actionsheet{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-family: $t-action-sheet-font-style;
+	.mask{
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	.body{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		background-color: rgba(0, 0, 0, .1);
+		.actionsheet-config{
+			box-sizing: border-box;
+			background-color: #F7F7F7;
+			.actionsheet-title{
+				line-height: calculate(48);
+				margin-bottom: calculate(16);
+				font-size: calculate(34);
+				color: #212121;
+				letter-spacing: calculate(-0.82);
+				text-align: center;
+			}
+			.actionsheet-desc{
+				line-height: calculate(37);
+				font-size: calculate(26);
+				color: #666666;
+				letter-spacing: calculate(-0.62);
+				text-align: center;
+			}
+		}
+		.item{
+			box-sizing: border-box;
+			height: $t-ac-item-height;
+			line-height: $t-ac-item-height;
+			background-color: $white;
+			color: $t-ac-item-font-color;
+			font-size: $t-ac-item-font-size;
+			border-bottom: 1px solid #E8E8E8;
+			&:last-of-type{
+				border: none;
+			}
+			letter-spacing: calculate(-0.82);
+		}
+		.cancel{
+			margin-top: calculate(16);
+			color: $t-ac-item-cancel-font-color;
+			font-size: $t-ac-item-cancel-font-size;
+		}
+	}
+}

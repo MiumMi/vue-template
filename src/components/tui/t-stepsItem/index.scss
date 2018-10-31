@@ -1,0 +1,32 @@
+@import '../style/_base.scss';
+
+$t-step-icon-size: calculate(54.7);
+$t-step-icon-margin: calculate(37.3);
+$t-step-icon-line-gary: #ccc;
+$t-step-icon-line-succ: #FD8238;
+
+.t-steps-item{
+  .t-steps-icon{
+    position: relative;
+    width: $t-step-icon-size;
+    height: $t-step-icon-size;
+    margin-right: $t-step-icon-margin;
+    img{
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+    }
+    .t-steps-line{
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 5;
+      width: 1px;
+      background: $t-step-icon-line-gary;
+    }
+    .t-success-line{
+      background: $t-step-icon-line-succ;
+    }
+  }
+}

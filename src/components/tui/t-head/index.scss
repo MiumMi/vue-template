@@ -1,0 +1,52 @@
+@import '../style/_reset.scss';
+@import '../style/_color.scss';
+@import '../style/_calculate.scss';
+@import '../style/_base.scss';
+@import '../style/layout.scss';
+
+$t-head-height: 2.2rem;
+$t-head-background-color: $mainColor;
+$t-head-font-color: #FFFFFF;
+$t-head-font-size: .9rem;
+$t-head-font-style: PingFangSC-Regular;
+.t-head{
+	position: relative;
+	height: $t-head-height;
+	line-height: $t-head-font-size;
+	background-color: $t-head-background-color;
+	color: $t-head-font-color;
+	font-size: $t-head-font-size;
+	font-family: $t-head-font-style;
+	.title, .text{
+		line-height: $t-head-height;
+		box-sizing: border-box;
+		letter-spacing: -1.05px;
+	}
+	.left, .right{
+		position: relative;
+		padding-top: (($t-head-height - $t-head-font-size)/2);
+	    box-sizing: border-box;
+	}
+	.left{
+		padding-left: 1.25rem;
+	}
+	.right{
+		padding-right: .5rem;
+	}
+	.t-head-back{
+		position: absolute;
+		top: (($t-head-height - $t-head-font-size)/2);
+		left: .5rem;
+		z-index: 50;
+	}
+	.t-head-icon{
+		position: absolute;
+		top: (($t-head-height - .6)/2);
+		left: .8rem;
+		width: .5rem;
+		height: .5rem;
+		border: solid #FFF;
+		border-width: 1px 0 0 1px;
+		transform: rotate(-45deg);
+	}
+}

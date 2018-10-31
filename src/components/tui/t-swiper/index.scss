@@ -1,0 +1,67 @@
+@import '../style/_base.scss';
+
+$t-swiper-height: calculate(400);
+$t-swiper-dot-height: calculate(60);
+$t-swiper-desc-height: calculate(80);
+$t-swiper-desc-align: center;
+$active-color: $white;
+.t-swiper{
+  position: relative;
+  overflow: hidden;
+  .t-swiper-container{
+    position: relative;
+    height: $t-swiper-height;
+    overflow: hidden;
+  }
+  .t-swiper-ul{
+    position: relative;
+    overflow: hidden;
+  }
+  .t-swiper-item{
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+  .t-swiper-desc{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: $t-swiper-desc-height;
+    line-height: $t-swiper-desc-height;
+    background: rgba(0, 0, 0, .6);
+    color: $white;
+    text-align: $t-swiper-desc-align;
+  }
+  .t-swiper-dot-wrapper{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 300;
+    height: $t-swiper-dot-height;
+    line-height: $t-swiper-dot-height;
+  }
+  .t-swiper-dot-left{
+    text-align: left;
+  }
+  .t-swiper-dot-center{
+    text-align: center;
+  }
+  .t-swiper-dot-right{
+    text-align: right;
+  }
+  .t-swiper-dot{
+    display: inline-block;
+    width: calculate(15);
+    height: calculate(15);
+    margin-right: calculate(5);
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    &:last-of-type{
+      margin: 0;
+    }
+  }
+  .t-swiper-active{
+    background: $active-color;
+  }
+}

@@ -1,0 +1,75 @@
+@import '../../style/_reset.scss';
+@import '../../style/_color.scss';
+@import '../../style/_calculate.scss';
+@import '../../style/_base.scss';
+@import '../../style/_layout.scss';
+
+$t-poppicker-font-style: $default-font;
+$t-poppicker-body-height: 9rem;
+$t-poppicker-col-height: 1.5rem;
+
+.t-poppicker{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-family: $t-poppicker-font-style;
+	.body{
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		.poppick-head{
+		    padding: .3rem .5rem;
+			font-size: $big-font;
+			background-color: $w-9;
+			color: $b-6;
+		}
+		.poppick-body{
+			position: relative;
+			box-sizing: border-box;
+			height: $t-poppicker-body-height;
+			padding: 0 2rem;
+			background-color: $w-7;
+			overflow: hidden;
+		}
+	}
+}
+.t-poppicker-col{
+	height: $t-poppicker-body-height;
+	position: relative;
+	.scroller-body{
+		height: 100%;
+		padding-top: ( $t-poppicker-body-height - $t-poppicker-col-height ) / 2;
+		padding-bottom: ( $t-poppicker-body-height - $t-poppicker-col-height ) / 2;
+		.t-poppicker-item{
+			position: relative;
+			height: $t-poppicker-col-height;
+			line-height: $t-poppicker-col-height;
+			z-index: 2;
+			user-select: none;
+		}
+
+	}
+}
+*::-webkit-scrollbar{
+	display:none;
+	width:0;
+	height: 0;
+}
+.t-poppicker-col:after{
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: ( $t-poppicker-body-height - $t-poppicker-col-height )/ 2;
+	height: $t-poppicker-col-height;
+	width: 60%;
+	margin: auto;
+	border: solid $el-blue;
+	border-width: 1px 0;
+	user-select: none;
+	z-index: 1;
+}

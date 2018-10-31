@@ -1,0 +1,69 @@
+@import '../style/_reset.scss';
+@import '../style/_color.scss';
+@import '../style/_calculate.scss';
+@import '../style/_base.scss';
+@import '../style/layout.scss';
+
+$t-itemswiper-height: 3rem;
+$t-itemswiper-font-style: $default-font;
+
+.t-itemswiper{
+	position: relative;
+	height: $t-itemswiper-height;
+	background-color: #EEEEEE;
+	overflow: hidden;
+	font-family: $t-itemswiper-font-style;
+	.item-body{
+		height: $t-itemswiper-height;
+		box-sizing: border-box;
+		position: absolute;
+		z-index: 3;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		padding: 0 1rem;
+		background-color: #FFF;
+		transition: all .3s;
+	}
+	.item-content{
+		line-height: $t-itemswiper-height;
+	}
+	.option-right{
+		position: absolute;
+		right: 0;
+		z-index: 2;
+	}
+	.option-left{
+		position: absolute;
+		left: 0;
+		z-index: 2;
+	}
+	.item-option{
+		box-sizing: border-box;
+		height: $t-itemswiper-height;
+		line-height: $t-itemswiper-height - 1rem;
+		padding: .5rem;
+		background-color: $el-blue;
+		color: #FFF;
+	}
+}
+.item-border{
+	position: relative;
+}
+.item-border:before, .item-border:after{
+	position: absolute;
+	right: 0;
+	left: 0;
+	content: "";
+	width: 100%;
+	height: 1px;
+	background-color: #E8E8E8;
+	z-index: 4;
+}
+.item-border:before{
+	top: 0;
+}
+.item-border:after{
+	bottom: 0;
+}

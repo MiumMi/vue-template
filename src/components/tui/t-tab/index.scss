@@ -1,0 +1,18 @@
+@import '../style/_reset.scss';
+@import '../style/_color.scss';
+@import '../style/_calculate.scss';
+@import '../style/_base.scss';
+@import '../style/layout.scss';
+
+$t-tab-height: 3.5rem;
+$t-tab-broder-color: #E8E8E8; 
+$t-tab-font-style: $default-font;
+
+.t-tab{
+	height: $t-tab-height;
+	font-family: $t-tab-font-style;
+}
+.t-tab-border{
+	border: solid $t-tab-broder-color;
+	border-width: 1px 0;
+}

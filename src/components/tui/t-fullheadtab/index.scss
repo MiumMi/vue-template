@@ -1,0 +1,38 @@
+@import '../style/_reset.scss';
+@import '../style/_color.scss';
+@import '../style/_calculate.scss';
+@import '../style/_base.scss';
+@import '../style/layout.scss';
+
+$t-fullheadtab-height: 2.5rem;
+$t-fullheadtab-margin: calculate(20);
+$t-fullheadtab-font-style: $default-font;
+$t-fullheadtab-font-size: calculate(30);
+$t-fullheadtab-active-color: $blue;
+
+.t-fullheadtab{
+	box-sizing: border-box;
+	width: 100%;
+	height: $t-fullheadtab-height;
+	font-family: $t-fullheadtab-font-style;
+	font-size: $t-fullheadtab-font-size;
+
+	ul{
+		height: $t-fullheadtab-height;
+		li{
+			position: relative;
+			box-sizing: border-box;
+			height: $t-fullheadtab-height;
+			line-height: $t-fullheadtab-height;
+			text-align: center;
+			color: #212121;
+			letter-spacing: -0.88px;
+		}
+		.active{
+			color: $t-fullheadtab-active-color;
+		}
+		.active-bottom{
+			border-bottom: 1px solid $t-fullheadtab-active-color;
+		}
+	}
+}

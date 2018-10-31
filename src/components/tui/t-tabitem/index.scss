@@ -1,0 +1,41 @@
+@import '../style/_reset.scss';
+@import '../style/_color.scss';
+@import '../style/_calculate.scss';
+@import '../style/_base.scss';
+@import '../style/layout.scss';
+
+$t-tabitem-font-color: $b-8;
+$t-tabitem-active-font-color: $el-blue;
+$t-tabitem-font-size: .8rem;
+$t-tabitem-active-font-size: .95rem;
+$t-tabitem-font-style: $default-font;
+.t-tabitem{
+	position: relative;
+	color: $t-tabitem-font-color;
+	font-size: $t-tabitem-font-size;
+	transition: all .2s;
+	font-family: $t-tabitem-font-style;
+	.icon{
+		position: absolute;
+		width: 20%;
+		top: 20%;
+		left: 50%;
+		*{
+			margin-left: -100%;
+			width: 100%;
+		}
+	}
+	.text{
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		padding-bottom: .3rem;
+		text-align: center;
+	}
+}
+.t-tabitem-active{
+	color: $t-tabitem-active-font-color;
+	font-size: $t-tabitem-active-font-size;
+}

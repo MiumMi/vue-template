@@ -1,0 +1,39 @@
+@import '../style/_reset.scss';
+@import '../style/_color.scss';
+@import '../style/_calculate.scss';
+@import '../style/_base.scss';
+@import '../style/layout.scss';
+
+
+$t-botton-bc: $el-blue;
+$t-botton-disable: #999;
+$t-button-font-size: 1rem;
+$t-button-font-style: $default-font;
+.t-button{
+	position: relative;
+	padding: .5rem 0;
+	color: #FFF;
+	background-color: $t-botton-bc;
+	border-radius: 2px;
+	outline: none;
+	border: none;
+	transition: opacity .3s;
+	font-size: 0;
+	font-family: $t-button-font-style;
+	span{
+		display: inline-block;
+		font-size: $t-button-font-size;
+	}
+	.text{
+		font-size: $t-button-font-size;
+	}
+}
+.t-button:active{
+	opacity: .7;
+}
+.disabled{
+	background-color: $t-botton-disable;
+}
+.disabled:active{
+	opacity: 1;
+}

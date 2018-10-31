@@ -1,0 +1,48 @@
+@import '../../style/_reset.scss';
+@import '../../style/_color.scss';
+@import '../../style/_calculate.scss';
+@import '../../style/_base.scss';
+@import '../../style/_layout.scss';
+
+$t-toast-font-style: $default-font;
+$t-toast-background-color: rgba(0,0,0,0.80);
+$t-toast-font-color: #FFF;
+$t-toast-font-size: calculate(30);
+
+.t-toast{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-family: $t-toast-font-style;
+	.body{
+		box-sizing: border-box;
+		position: absolute;
+		top: 33%;
+		left: 0;
+		right: 0;
+		// width: 60%;
+		// padding: .5rem;
+		padding: calculate(43) calculate(75);
+		margin: auto;
+		background-color: $t-toast-background-color;
+		border-radius: calculate(16);
+		.succedImg{
+			display: block;
+			width: calculate(80);
+			height: calculate(80);
+			margin: 0 auto;
+			margin-bottom: calculate(24);
+		}
+		.loading{
+			margin-bottom: calculate(24);
+		}
+		.toast-text{
+			color: $t-toast-font-color;
+			font-size: $t-toast-font-size;
+		}
+	}
+}

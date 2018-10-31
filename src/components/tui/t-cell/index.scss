@@ -1,0 +1,88 @@
+@import '../style/_reset.scss';
+@import '../style/_color.scss';
+@import '../style/_calculate.scss';
+@import '../style/_base.scss';
+@import '../style/layout.scss';
+
+$t-cell-height: calculate(88);
+$t-cell-padding: 0 .75rem;
+$t-cell-border-color: #E8E8E8;
+$t-cell-title-font-size: 1rem;
+$t-cell-desc-font-size: .8rem;
+$t-cell-value-font-size: .8rem;
+$t-cell-icon-font-size: 1.4rem;
+$t-cell-icon-color: #969696;
+$t-cell-active-color: rgba(238, 238, 238, .60);
+$t-cell-font-style: $default-font; //"PingFang SC"
+
+.t-cell{
+	position: relative;
+	height: $t-cell-height;
+	font-family: $t-cell-font-style;
+	background: $white;
+	.cell-row{
+		position: relative;
+		box-sizing: border-box;
+		height: 100%;
+		width: 100%;
+		padding: $t-cell-padding;
+		align-items: center;
+		.title{
+			line-height: $t-cell-height;
+			font-size: $t-cell-title-font-size;
+		}
+		.desc{
+			padding-left: calculate(20);
+			font-size: $t-cell-desc-font-size;
+			color: #666;
+		}
+		.value{
+			// line-height: $t-cell-height;
+			padding-right: calculate(20);	
+			font-size: $t-cell-value-font-size;
+		}
+		.r-arrow{
+			position: absolute;
+			top: 38%;
+			right: .8rem;
+			font-size: 1.4rem;
+			transition: all .5s;
+			width: calculate(20);
+	    height: calculate(20);
+	    border: solid $t-cell-icon-color;
+	    border-width: 0 calculate(2) calculate(2) 0;
+		}
+		.arrow-img{
+			position: absolute;
+			top: 50%;
+			right: .8rem;
+			transform: translateY(-50%);
+			width: calculate(13);
+			height: calculate(25);
+		}
+	}
+}
+.t-interval-up:before, .t-interval-down:after, .t-no-interval-up:before, .t-no-interval-down:after{
+	content: "";
+	position: absolute;
+	width: 100%;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background-color: $t-cell-border-color;
+}
+.t-interval-up:before,.t-interval-down:after{
+	width: 80%;
+	left: 10%;
+	right: 10%;
+}
+.t-interval-up:before,.t-no-interval-up:before{
+	top: 0;
+}
+.t-interval-down:after, .t-no-interval-down:after{
+	bottom: 0;
+}
+.t-cell:active{
+	// background-color: $t-cell-active-color;
+	transition: background .1s;
+}
